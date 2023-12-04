@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+
+import { AppRoutes } from './constants/routes';
+
+import Dashboard from './pages/dashboard/dashboard.component';
+import SideNavbar from './components/layout/side-nav-bar/side-navbar.component';
+
+import { AppWrapper, CenterContent, LeftDrawer } from 'App.styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+    <LeftDrawer>
+      <SideNavbar />
+    </LeftDrawer>
+
+    <CenterContent>
+      <Routes>
+        <Route path={AppRoutes.dashboard.path} element={<Dashboard />} />
+      </Routes>
+    </CenterContent>
+  </AppWrapper>
   );
 }
 
