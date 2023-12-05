@@ -31,7 +31,6 @@ const SideNavbar = () => {
           <NavbarHeader>
             {!collapsed && (
               <Row>
-               
                 <Typography sx={{whiteSpace: 'nowrap'}} fontSize={14}>
                   Something App
                 </Typography>
