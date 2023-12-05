@@ -7,8 +7,10 @@ import CustomSelect from 'components/shared/custom-select/custom-select.componen
 import { Row } from 'components/shared/shared.styles';
 import HighRisk from './high-risk/high-risk.component';
 import CriticalAssets from './critical-assets/critical-assets.components';
+import ChokePoints from './choke-points/choke-points.component';
+import AttackTechniques from './attack-techniques/attack-techniques.component';
 
-const cardHeight = 250
+const cardHeight = 250;
 
 const ScenarioFitlers = () => {
   const [selectedScenario, setSelectedScenario] = useState(null);
@@ -32,6 +34,12 @@ const ScenarioFitlers = () => {
         </Grid>
         <Grid item xs={6} sx={{ height: cardHeight }}>
           <CriticalAssets />
+        </Grid>
+        <Grid item xs={6} sx={{ height: cardHeight }}>
+          <ChokePoints />
+        </Grid>
+        <Grid item xs={6} sx={{ height: cardHeight }}>
+          <AttackTechniques />
         </Grid>
       </Grid>
     </>

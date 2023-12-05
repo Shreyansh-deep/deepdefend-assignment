@@ -1,0 +1,23 @@
+[
+  {
+    "label": "Local Credentials",
+    "complexity": 1,
+    "severity": 2,
+    "affected_entities": 10,
+    "percent_assets_at_risk": 45
+  },
+  {
+    "label": "PrintNightmare- Windows Private",
+    "complexity": 1,
+    "severity": 3,
+    "affected_entities": 39,
+    "percent_assets_at_risk": 31
+  },
+  {
+    "label": "Azure Add Role Assignment",
+    "complexity": 1,
+    "severity": 3,
+    "affected_entities": 9,
+    "percent_assets_at_risk": 21
+  }
+]
