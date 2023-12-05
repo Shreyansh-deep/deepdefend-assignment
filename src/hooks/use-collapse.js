@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const useCollapse = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   const toggleCollapse = () => setCollapsed((prev) => !prev);
 

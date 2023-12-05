@@ -11,19 +11,16 @@
     {
       "label": "My First Dataset",
       "data": [65, 59, 80, 81, 56, 55, 40],
-      "fill": false,
       "tension": 0.1
     },
     {
       "label": "My Second Dataset",
       "data": [40, 81, 55, 56, 65, 59, 80],
-      "fill": false,
       "tension": 0.1
     },
     {
       "label": "My Third Dataset",
       "data": [59, 40, 81, 55, 80, 65, 56],
-      "fill": false,
       "tension": 0.1
     }
   ]

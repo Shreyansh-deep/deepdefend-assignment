@@ -3,10 +3,10 @@ import Chart from 'chart.js/auto';
 import SetttingsIcon from '@mui/icons-material/SettingsOutlined';
 import { Box, Typography } from '@mui/material';
 
+import { chartColors } from 'constants/colors';
 import data from './data.json';
 
 import { Column, Row } from 'components/shared/shared.styles';
-import { chartColors } from 'constants/colors';
 
 const Legend = ({ label, color }) => (
   <Row sx={{ columnGap: 1 }} justifyContent >
@@ -16,10 +16,11 @@ const Legend = ({ label, color }) => (
 );
 
 const LineChart = () => {
+
   useEffect(() => {
     const chart = new Chart(document.getElementById('chart'), {
       type: 'line',
-      data: {...data, datasets: data.datasets.map((dataset, i) => ({...dataset, borderColor: chartColors[i] }))},
+      data: {...data, datasets: data.datasets.map((dataset, i) => ({...dataset, borderColor: chartColors[i], tension: 0.4 }))},
       options: {
         maintainAspectRatio: false,
         plugins: {
@@ -40,11 +41,11 @@ const LineChart = () => {
       <Column sx={{ height: '100%' }} alignItems='flex-start' justifyContent='space-between' >
         <div>
           {data.datasets.map(({ label }, index) => (
-            <Legend label={label} color={chartColors[index]} />
+            <Legend key={label} label={label} color={chartColors[index]} />
           ))}
         </div>
-        <Row sx={{ columnGap: 1 }} >
-          <SetttingsIcon fontSize='small' /> <Typography fontSize={12} >Configure</Typography>
+        <Row sx={{ columnGap: 1, cursor: 'pointer'}} >
+          <SetttingsIcon fontSize='small' /> <Typography fontSize={12}>Configure</Typography>
         </Row>
       </Column>
 

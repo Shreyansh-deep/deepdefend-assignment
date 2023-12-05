@@ -1,0 +1,17 @@
+{
+    "labels": [
+      "1st april",
+      "2nd april",
+      "3rd april",
+      "4th april",
+      "5th april",
+      "6th april"
+    ],
+    "datasets": [
+      {
+        "label": "My First Dataset",
+        "data": [65, 59, 80, 81, 56, 55, 40]
+      }
+    ]
+  }
+  
