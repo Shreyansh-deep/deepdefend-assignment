@@ -30,10 +30,10 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-### Code Strucher
+### Code Structure
 
 All the route of the app is distributed in pages directry and all the compenents specific to each page are can be found in page specific 
-directries in the component directry.
+directries in the component directry.\
 Components which are shared between multiple components are placed in shared directry.
 
 
