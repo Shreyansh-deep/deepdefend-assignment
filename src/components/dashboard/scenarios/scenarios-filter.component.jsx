@@ -6,6 +6,9 @@ import CustomSelect from 'components/shared/custom-select/custom-select.componen
 
 import { Row } from 'components/shared/shared.styles';
 import HighRisk from './high-risk/high-risk.component';
+import CriticalAssets from './critical-assets/critical-assets.components';
+
+const cardHeight = 250
 
 const ScenarioFitlers = () => {
   const [selectedScenario, setSelectedScenario] = useState(null);
@@ -24,8 +27,11 @@ const ScenarioFitlers = () => {
         <CustomSelect size='small' options={daysFitler} onChange={() => {}} />
       </Row>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={6} sx={{ height: cardHeight }}>
           <HighRisk />
+        </Grid>
+        <Grid item xs={6} sx={{ height: cardHeight }}>
+          <CriticalAssets />
         </Grid>
       </Grid>
     </>

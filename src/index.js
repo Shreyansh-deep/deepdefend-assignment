@@ -11,6 +11,16 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
+  components: {
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+         height: 'auto',
+         padding: 0
+        }
+      }
+    }
+  }
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
